@@ -1,0 +1,100 @@
+body{
+    background: #12141a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+/*---------------------------*/
+header {
+    float: left;
+    background: #171921;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #90a4ae;
+    border-right: 3px solid #90a4ae;
+}
+
+header h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+header ul li {
+    color: #90a4ae;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+
+header ul li:hover, header ul a:hover {
+    color: #d8d9de;
+    text-decoration: underline;
+    transform: scaleY(1.15) scaleX(1.1);
+    transition: 1.12ms;
+}
+/*---------------------------*/
+main .content {
+    vertical-align: middle;
+    float: left;
+    color: #90a4ae;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .content h1 {
+    font-size: 50px;
+}
+
+main .content p {
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 23px;
+}
+
+main .content ul {
+    display: flex;
+    justify-content: center;
+}
+
+main .content a {
+    margin: 0 20px 0 0;
+    font-size: 40px;
+    color: #90a4ae;
+}
+
+main .content a:hover {
+    color: #d8d9de;
+    transform: scaleY(1.2) scaleX(1.1);
+    transition: 0.3s;
+}
+
+#tutorial_links {
+    display: grid;
+}
+
+#tutorial_links a {
+    font-size: 25px;
+}
+/*---------------------------*/
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+footer {
+    color: #90a4ae;
+	position: absolute;
+    bottom: 0;
+    text-align: center;
+	width: 75%;
+	height: 80px;
+}
