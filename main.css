@@ -1,100 +1,239 @@
-body{
-    background: #12141a;
-    font-family: 'Montserrat', sans-serif;
+body {
+  background: #12141a;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 /*---------------------------*/
 header {
-    float: left;
-    background: #171921;
-    width: 20%;
-    padding: 2.5%;
-    height: 100vh;
-    color: #90a4ae;
-    border-right: 3px solid #90a4ae;
+  float: left;
+  background: #171921;
+  width: 20%;
+  padding: 2.5%;
+  height: 100vh;
+  color: #90a4ae;
+  border-right: 3px solid #90a4ae;
 }
 
 header h3 {
-    margin-top: 50px;
-    font-size: 28px;
+  margin-top: 50px;
+  font-size: 28px;
 }
 
 header ul li {
-    color: #90a4ae;
-    display: block;
-    margin-top: 20px;
-    transition: transform .6s ease;
+  color: #90a4ae;
+  display: block;
+  margin-top: 20px;
+  transition: transform 0.6s ease;
 }
 
-header ul li:hover, header ul a:hover {
-    color: #d8d9de;
-    text-decoration: underline;
-    transform: scaleY(1.15) scaleX(1.1);
-    transition: 1.12ms;
+header ul li:hover,
+header ul a:hover {
+  color: #d8d9de;
+  text-decoration: underline;
+  transform: scaleY(1.15) scaleX(1.1);
+  transition: 1.12ms;
 }
 /*---------------------------*/
 main .content {
-    vertical-align: middle;
-    float: left;
-    color: #90a4ae;
-    margin-top: 100px;
-    text-align: center;
-    width: 75%;
+  vertical-align: middle;
+  float: left;
+  color: #90a4ae;
+  margin-top: 100px;
+  text-align: center;
+  width: 75%;
 }
 
 main .content h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 main .content p {
-    max-width: 400px;
-    margin: 20px auto;
-    font-size: 23px;
+  max-width: 400px;
+  margin: 20px auto;
+  font-size: 23px;
 }
 
 main .content ul {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 main .content a {
-    margin: 0 20px 0 0;
-    font-size: 40px;
-    color: #90a4ae;
+  margin: 0 20px 0 0;
+  font-size: 40px;
+  color: #90a4ae;
 }
 
 main .content a:hover {
-    color: #d8d9de;
-    transform: scaleY(1.2) scaleX(1.1);
-    transition: 0.3s;
+  color: #d8d9de;
+  transform: scaleY(1.2) scaleX(1.1);
+  transition: 0.3s;
 }
 
 #tutorial_links {
-    display: grid;
+  display: grid;
 }
 
 #tutorial_links a {
-    font-size: 25px;
+  font-size: 25px;
 }
 /*---------------------------*/
 form {
-    margin-left: 32%;
-    width: 500px;
-    margin-top: 50px;
+  margin-left: 32%;
+  width: 500px;
+  margin-top: 50px;
 }
 
 footer {
-    color: #90a4ae;
-	position: absolute;
-    bottom: 0;
-    text-align: center;
-	width: 75%;
-	height: 80px;
+  color: #90a4ae;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 75%;
+  height: 80px;
+}
+/*---------------------------*/
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.game-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  max-width: 100%;
+}
+
+#canvas {
+  display: block;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  background: #1a1a2e;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  color: #a0a0b0;
+  font-size: 14px;
+  margin-top: 12px;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 4px;
+  gap: 20px;
+}
+
+.game-info span {
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+.game-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.game-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+}
+
+.game-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-btn:active {
+  transform: translateY(0);
+}
+
+.game-status {
+  color: #a0a0b0;
+  font-size: 14px;
+  margin-top: 10px;
+  min-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  max-width: 350px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+.game-status.success {
+  color: #60c060;
+}
+
+.game-status.error {
+  color: #ff6b6b;
+}
+
+.game-status.info {
+  color: #a0a0b0;
+}
+
+@media (max-width: 768px) {
+  #canvas {
+    width: 250px;
+    height: 250px;
+  }
+  .game-wrapper {
+    padding: 15px;
+  }
+  .game-info {
+    font-size: 12px;
+    gap: 10px;
+  }
+  .game-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+  .game-status {
+    font-size: 12px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 400px) {
+  #canvas {
+    width: 200px;
+    height: 200px;
+  }
+  .game-wrapper {
+    padding: 10px;
+  }
+  .game-status {
+    max-width: 220px;
+    font-size: 11px;
+  }
 }
